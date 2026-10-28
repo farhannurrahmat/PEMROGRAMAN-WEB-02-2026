@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-paper: #faf8f4;
+  --color-ink: #14171f;
+  --color-accent: #1f4d3a;
+  --color-line: #e5dfd3;
+  --font-serif: "Fraunces", serif;
+  --font-sans: "Inter", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-paper font-sans text-ink antialiased transition-colors duration-500 dark:bg-ink dark:text-paper;
+}

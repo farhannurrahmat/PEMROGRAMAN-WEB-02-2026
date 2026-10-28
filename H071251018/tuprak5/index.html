@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Papan Tugas Tim</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <div class="mx-auto flex w-full max-w-7xl flex-col gap-4 p-4 md:flex-row md:p-6">
+
+    <aside class="h-fit rounded-xl bg-white p-4 shadow-sm md:w-72 md:shrink-0">
+      <h1 class="text-lg font-bold">Tim Marsha</h1>
+      <p class="mb-2 mt-3 text-xs text-gray-500">Anggota</p>
+      <p id="statusAnggota" class="text-sm text-gray-500"></p>
+      <p id="errorAnggota" class="text-sm text-red-600"></p>
+      <div id="daftarAnggota" class="flex flex-col gap-1"></div>
+    </aside>
+
+    <main class="min-w-0 flex-1 rounded-xl bg-white p-6 shadow-sm">
+      <div class="flex items-end justify-between gap-4">
+        <div>
+          <h2 id="judulTugas" class="text-2xl font-bold">Pilih anggota tim</h2>
+          <p id="ringkasan" class="text-sm text-gray-500"></p>
+        </div>
+        <div class="h-1.5 w-40 overflow-hidden rounded-full bg-gray-200">
+          <div id="barProgres" class="h-full w-0 bg-green-500"></div>
+        </div>
+      </div>
+
+      <div class="mt-6 flex flex-col gap-2 md:flex-row">
+        <input id="inputCari" type="text" placeholder="Cari judul tugas"
+          class="rounded-lg bg-gray-100 px-4 py-2 text-sm outline-none focus:ring-2 focus:ring-blue-400 md:w-1/3" />
+        <form id="formTugas" class="flex flex-1 gap-2">
+          <input id="inputJudul" type="text" placeholder="Tambah tugas baru, minimal 5 karakter"
+            class="min-w-0 flex-1 rounded-lg bg-gray-100 px-4 py-2 text-sm outline-none focus:ring-2 focus:ring-blue-400" />
+          <button id="tombolSimpan" type="submit"
+            class="rounded-lg bg-blue-600 px-5 py-2 text-sm font-semibold text-white hover:bg-blue-700">
+            Simpan
+          </button>
+        </form>
+      </div>
+
+      <p id="pesanForm" class="mt-2 text-sm text-red-600"></p>
+      <p id="notifikasi" class="mt-2 text-sm text-green-600"></p>
+
+      <p id="statusTugas" class="mt-4 text-sm text-gray-500"></p>
+      <p id="errorTugas" class="mt-4 text-sm text-red-600"></p>
+      <ul id="daftarTugas" class="mt-4"></ul>
+      <p id="pesanKosong" class="mt-4 text-sm text-gray-500"></p>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
